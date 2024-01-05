@@ -8,7 +8,10 @@ class telaInicial{
         cy.get(elem.inputToDo).type(dado).type('{enter}')
     }
 
-       concluirItem(){
+    
+
+
+    concluirItem(){
         cy.get(concluirItem.buttonConcluirItem)
         .first()
         .click()
@@ -29,6 +32,7 @@ class telaInicial{
         .invoke('show')
         .click()
      }
+     
 
      validarInput(texto){
 
@@ -47,6 +51,8 @@ class telaInicial{
         cy.get(concluirItem.validarlistaItens)
         .should('have.length',numero)
     }
+    
+    
 }
 
 export default new telaInicial();

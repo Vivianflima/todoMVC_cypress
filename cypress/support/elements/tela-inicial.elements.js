@@ -9,6 +9,7 @@ export const ITENS = {
     buttonConcluirItem: "input[class='toggle']",
     listaItens: "ul[class='todo-list'] div",
     validarlistaItens: "ul[class='todo-list'] li"
+    
 }
 
 export const FILTROS = {

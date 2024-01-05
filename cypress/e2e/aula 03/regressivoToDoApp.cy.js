@@ -92,5 +92,25 @@ describe('Regressivo ToDo App', () => {
         telaInicial.validarSizeToDo(2)
     });
     })
-})
+    
+    context('Validar a limpeza da lista',()=>{
+        
+    beforeEach(() => {
+        cy.visit('/')
+        var todoItens = ["Maçã", "Banana", "Cenoura"]
 
+        todoItens.forEach(function(item, indice, array){
+            telaInicial.inputText(item)
+            
+        })
+    })
+
+    it('Limpar a lista de ToDo', () => {
+        telaInicial.deletarItem()
+        telaInicial.deletarItem()
+        telaInicial.deletarItem()
+        telaInicial.validarInput("What needs to be done?")      
+    });
+    
+})
+})
